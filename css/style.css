@@ -14,16 +14,77 @@ header {
   height: 100vh;
 }
 
-nav {
-  position: fixed;
+header .logo img {
+  width: 130px;
+  position: absolute;
+  top: 5%;
+  left: 120px;
 }
 
-nav ul {
+.menu-btn {
+  position: fixed;
+  left: 30px;
+  top: 7%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  z-index: 2;
+}
+
+.menu-burger {
+  width: 20px;
+  height: 3px;
+  background-color: #2c7ae7;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-burger::before,
+.menu-burger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #2c7ae7;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-burger::after {
+  transform: translateY(10px);
+}
+
+.menu-btn.open .menu-burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transform: translateX(-150%);
   list-style-type: none;
+  transition: all .5s ease;
+}
+
+.menu.open {
+  transform: translateX(0);
 }
 
 nav ul li a {
@@ -44,4 +105,5 @@ nav ul li a {
 .socials i {
   font-size: 17px;
 }
+
 /*# sourceMappingURL=style.css.map */
