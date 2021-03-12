@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+header {
+    @include flexCenter(column);
+    font-family: $mainFont;
+    color: $mainColor;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+}
+
+nav ul {
+    @include flexCenter(column);
+
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: $mainColor;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+    margin-top: 15px;
+
+}
+
+.socials i {
+    font-size: 17px;
+}
