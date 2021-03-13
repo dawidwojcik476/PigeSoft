@@ -15,135 +15,212 @@ header {
     height: 100vh;
     position: relative;
 
-
-    .logo {
+    .nav-bgc {
         position: fixed;
-        top: 0;
-        background-color: #fff;
         width: 100vw;
-        height: 10%;
-        z-index: 2;
-
-        @media (min-width:$big-mobile) {
-            height: 8%;
-        }
-
-        @media (min-width:$tablet) {
-            height: 70px;
-        }
-
-        img {
-            width: 130px;
-            position: fixed;
-            top: 3%;
-            left: 35%;
-            z-index: 1330;
-
-            @media (min-width: $tablet) {
-                width: 150px;
-                top: 20px;
-                left: 40%;
-            }
-        }
-
-    }
-
-    .menu-btn {
-        position: fixed;
-        left: 30px;
-        top: 5%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        transition: all .5s ease-in-out;
-        z-index: 3;
-
+        height: 10vh;
+        background-color: #fff;
+        top: 0;
+        z-index: 1010101;
 
         @media (min-width: $big-mobile) {
-            top: 33px;
+            height: 8vh;
         }
 
-        .menu-burger {
-            width: 20px;
-            height: 3px;
-            background-color: $mainColor;
-            border-radius: 5px;
-            transition: all .5s ease-in-out;
+        @media (min-width: $tablet) {
+            height: 6vh;
         }
 
-        .menu-burger::before,
-        .menu-burger::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 3px;
-            background: $mainColor;
-            border-radius: 5px;
-            transition: all .5s ease-in-out;
+        @media (min-width: $desktop) {
+            height: 4.5vh;
         }
 
-        .menu-burger::before {
-            transform: translateY(-10px);
+        @media (min-width: $big-desktop) {
+            height: 6vh;
         }
 
-        .menu-burger::after {
-            transform: translateY(10px);
-        }
 
-    }
 
-    .menu-btn.open .menu-burger {
-        transform: translateX(-50px);
-        background: transparent;
-        box-shadow: none;
-    }
-
-    .menu-btn.open .menu-burger::before {
-        transform: rotate(45deg) translate(35px, -35px);
-    }
-
-    .menu-btn.open .menu-burger::after {
-        transform: rotate(-45deg) translate(35px, 35px);
-    }
-
-    nav {
-        .menu {
-            @include flexCenter(column);
-            transform: translateX(-150%);
-            list-style-type: none;
-            transition: all .5s ease;
-            background-color: white;
-            height: 100vh;
-            width: 100vw;
+        .logo {
             position: fixed;
-            left: 0;
             top: 0;
-            z-index: 1;
+            width: 30vw;
+            height: 10%;
+            z-index: 2;
+
+            @media (min-width:$big-mobile) {
+                height: 8%;
+            }
+
+            @media (min-width:$tablet) {
+                height: 70px;
+            }
+
+            img {
+                width: 130px;
+                position: fixed;
+                top: 3%;
+                left: 35%;
+                z-index: 1330;
+
+                @media (min-width: $tablet) {
+                    width: 150px;
+                    top: 20px;
+                    left: 41%;
+
+                    @media (min-width: $desktop) {
+                        transform: translateX(-24vh);
+
+                        @media (min-width: $big-desktop) {
+                            transform: translateX(-30vh);
+                        }
+                    }
+
+                }
+            }
+
         }
 
+        .menu-btn {
+            position: fixed;
+            left: 30px;
+            top: 5%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            z-index: 3;
 
-        .menu.open {
-            transform: translateX(0);
+
+            @media (min-width: $big-mobile) {
+                top: 33px;
+            }
+
+            @media (min-width: $desktop) {
+                display: none;
+            }
+
+            .menu-burger {
+                width: 20px;
+                height: 3px;
+                background-color: $mainColor;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-burger::before,
+            .menu-burger::after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background: $mainColor;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+
+            .menu-burger::before {
+                transform: translateY(-10px);
+            }
+
+            .menu-burger::after {
+                transform: translateY(10px);
+            }
+
         }
 
-        li {
-            a {
-                color: $mainColor;
-                text-decoration: none;
-                font-weight: 500;
-                line-height: 50px;
-                font-size: 20px;
+        .menu-btn.open .menu-burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
 
-                @media (min-width:$big-mobile) {
-                    font-size: 25px;
-                    line-height: 60px;
+        .menu-btn.open .menu-burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu-btn.open .menu-burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        nav {
+
+
+            .menu {
+                @include flexCenter(column);
+                transform: translateX(-150%);
+                list-style-type: none;
+                transition: all .5s ease;
+                background-color: white;
+                height: 100vh;
+                width: 100vw;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 1;
+
+                @media (min-width: $desktop) {
+                    transform: translateX(0);
+                    background-color: transparent;
+                    height: 5vh;
+                    flex-direction: row;
+                    top: 8.6vh;
+                    justify-content: space-around;
+                    width: 60vw;
+                    left: 30vw;
+
                 }
 
-                @media (min-width:$tablet) {
-                    font-size: 35px;
-                    line-height: 100px;
-                    position: relative;
-                    top: -120px;
+                @media (min-width: $big-desktop) {
+                    width: 40vw;
+                    left: 38vw;
+                }
+
+            }
+
+
+
+            .menu.open {
+                transform: translateX(0);
+            }
+
+            li {
+                a {
+                    color: $mainColor;
+                    text-decoration: none;
+                    font-weight: 500;
+                    line-height: 50px;
+                    font-size: 20px;
+
+                    @media (min-width:$big-mobile) {
+                        font-size: 25px;
+                        line-height: 60px;
+                    }
+
+                    @media (min-width:$tablet) {
+                        font-size: 35px;
+                        line-height: 100px;
+                        position: relative;
+                        top: -120px;
+                    }
+
+                    @media (min-width: $desktop) {
+                        font-size: 15px;
+                        color: black;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            color: $mainColor;
+                        }
+
+                    }
+
+                    @media (min-width: $big-desktop) {
+                        top: -8vh;
+                        font-size: 17px;
+                    }
+
+
                 }
             }
 
@@ -164,6 +241,11 @@ header {
                     bottom: 150%;
                 }
 
+                @media (min-width: $desktop) {
+                    display: none;
+                }
+
+
                 i {
                     font-size: 17px;
 
@@ -177,91 +259,134 @@ header {
 
 
     }
+}
 
-    .banner-text {
-        color: white;
+.banner-text {
+    color: white;
 
-        h1 {
-            text-align: right;
-            width: 79vw;
-            position: relative;
-            left: -20%;
-            top: -4%;
+    h1 {
+        text-align: right;
+        width: 79vw;
+        position: relative;
+        left: -20%;
+        top: -4%;
 
-            @media (min-width: $big-mobile) {
-                top: -100%;
-                width: 50vw;
-                left: -53%;
-            }
-
-            @media (min-width:$tablet) {
-                font-size: 45px;
-            }
+        @media (min-width: $big-mobile) {
+            top: -30%;
+            width: 50vw;
+            left: -30%;
         }
 
-        h2 {
-            font-size: 20px;
-            font-weight: 400;
-            width: 90vw;
-            position: relative;
-            top: 12%;
-            line-height: 30px;
-
-            @media (min-width: $big-mobile) {
-                top: -90%;
-                width: 60vw;
-                left: -25%;
-            }
+        @media (min-width:$tablet) {
+            font-size: 45px;
+            top: -95%;
         }
 
+        @media (min-width: $desktop) {
+            top: -30vh;
+            width: 35vw;
+            left: -26vh;
+        }
+
+        @media (min-width: $big-desktop) {
+            top: -22vh;
+            width: 20vw;
+            left: -20vh;
+            text-align: left;
+        }
     }
 
-    .buttons {
-        display: flex;
-        justify-content: space-around;
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
         width: 90vw;
         position: relative;
-        top: 13%;
+        top: 12%;
+        line-height: 30px;
 
-        @media(min-width:$tablet) {
-            top: -10%;
-            width: 50vw;
-            left: -180px
+        @media (min-width: $big-mobile) {
+            top: -90%;
+            width: 60vw;
+            left: -25%;
         }
 
-        a {
-            color: white;
-            font-size: 15px;
-            text-decoration: none;
-            border: solid 1px white;
-            border-radius: 15px;
-            padding: 10px 15px;
-
-            @media (min-width:$big-mobile) {
-                font-size: 17px;
-                padding: 17px 20px;
-                transform: translateY(-130%);
-            }
-
-            @media (min-width:$big-mobile) {
-                padding: 17px 25px;
-            }
-
-
-            i {
-                font-size: 13px;
-                margin-left: 8px;
-            }
-
+        @media (min-width: $desktop) {
+            top: -28vh;
+            width: 35vw;
+            left: -20vw;
         }
 
-        .aboutus {
-            background-color: $mainColor;
-            border: 0;
+        @media (min-width: $big-desktop) {
+            top: -20vh;
+            width: 20vw;
+            left: -10vw;
+            text-align: left;
+            font-size: 22px;
+            font-weight: 200;
         }
     }
 
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
+    position: relative;
+    top: 13%;
+
+    @media (min-width: $big-mobile) {
+        top: 6%;
+    }
+
+    @media(min-width:$tablet) {
+        top: -10%;
+        width: 50vw;
+        left: -180px
+    }
+
+    @media (min-width: $desktop) {
+        top: -20vh;
+        width: 35vw;
+        left: -15vw;
+    }
+
+    @media (min-width: $big-desktop) {
+        top: -8vh;
+        width: 20vw;
+        left: -10vw;
+        text-align: left;
+    }
+
+    a {
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+        border: solid 1px white;
+        border-radius: 15px;
+        padding: 10px 15px;
+
+        @media (min-width:$big-mobile) {
+            font-size: 17px;
+            padding: 17px 20px;
+            transform: translateY(-130%);
+        }
+
+
+        i {
+            font-size: 13px;
+            margin-left: 8px;
+        }
+
+    }
+
+    .aboutus {
+        background-color: $mainColor;
+        border: 0;
+    }
+}
+
+
 
 
 header::before {
@@ -280,5 +405,15 @@ header::before {
         background-size: 200%;
         top: 6%;
     }
+
+    @media (min-width: $desktop) {
+        top: 3%;
+        background-size: 170%;
+    }
+
+    @media (min-width: $big-desktop) {
+        background-size: 100%;
+    }
+
 
 }

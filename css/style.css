@@ -19,28 +19,60 @@ header {
   position: relative;
 }
 
-header .logo {
+header .nav-bgc {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background-color: #fff;
+  top: 0;
+  z-index: 1010101;
+}
+
+@media (min-width: 375px) {
+  header .nav-bgc {
+    height: 8vh;
+  }
+}
+
+@media (min-width: 768px) {
+  header .nav-bgc {
+    height: 6vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .nav-bgc {
+    height: 4.5vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  header .nav-bgc {
+    height: 6vh;
+  }
+}
+
+header .nav-bgc .logo {
   position: fixed;
   top: 0;
-  background-color: #fff;
-  width: 100vw;
+  width: 30vw;
   height: 10%;
   z-index: 2;
 }
 
 @media (min-width: 375px) {
-  header .logo {
+  header .nav-bgc .logo {
     height: 8%;
   }
 }
 
 @media (min-width: 768px) {
-  header .logo {
+  header .nav-bgc .logo {
     height: 70px;
   }
 }
 
-header .logo img {
+header .nav-bgc .logo img {
   width: 130px;
   position: fixed;
   top: 3%;
@@ -49,14 +81,26 @@ header .logo img {
 }
 
 @media (min-width: 768px) {
-  header .logo img {
+  header .nav-bgc .logo img {
     width: 150px;
     top: 20px;
-    left: 40%;
+    left: 41%;
   }
 }
 
-header .menu-btn {
+@media (min-width: 768px) and (min-width: 1024px) {
+  header .nav-bgc .logo img {
+    transform: translateX(-24vh);
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1024px) and (min-width: 1600px) {
+  header .nav-bgc .logo img {
+    transform: translateX(-30vh);
+  }
+}
+
+header .nav-bgc .menu-btn {
   position: fixed;
   left: 30px;
   top: 5%;
@@ -68,12 +112,18 @@ header .menu-btn {
 }
 
 @media (min-width: 375px) {
-  header .menu-btn {
+  header .nav-bgc .menu-btn {
     top: 33px;
   }
 }
 
-header .menu-btn .menu-burger {
+@media (min-width: 1024px) {
+  header .nav-bgc .menu-btn {
+    display: none;
+  }
+}
+
+header .nav-bgc .menu-btn .menu-burger {
   width: 20px;
   height: 3px;
   background-color: #2c7ae7;
@@ -81,8 +131,8 @@ header .menu-btn .menu-burger {
   transition: all .5s ease-in-out;
 }
 
-header .menu-btn .menu-burger::before,
-header .menu-btn .menu-burger::after {
+header .nav-bgc .menu-btn .menu-burger::before,
+header .nav-bgc .menu-btn .menu-burger::after {
   content: '';
   position: absolute;
   width: 30px;
@@ -92,29 +142,29 @@ header .menu-btn .menu-burger::after {
   transition: all .5s ease-in-out;
 }
 
-header .menu-btn .menu-burger::before {
+header .nav-bgc .menu-btn .menu-burger::before {
   transform: translateY(-10px);
 }
 
-header .menu-btn .menu-burger::after {
+header .nav-bgc .menu-btn .menu-burger::after {
   transform: translateY(10px);
 }
 
-header .menu-btn.open .menu-burger {
+header .nav-bgc .menu-btn.open .menu-burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
 }
 
-header .menu-btn.open .menu-burger::before {
+header .nav-bgc .menu-btn.open .menu-burger::before {
   transform: rotate(45deg) translate(35px, -35px);
 }
 
-header .menu-btn.open .menu-burger::after {
+header .nav-bgc .menu-btn.open .menu-burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-header nav .menu {
+header .nav-bgc nav .menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,11 +181,31 @@ header nav .menu {
   z-index: 1;
 }
 
-header nav .menu.open {
+@media (min-width: 1024px) {
+  header .nav-bgc nav .menu {
+    transform: translateX(0);
+    background-color: transparent;
+    height: 5vh;
+    flex-direction: row;
+    top: 8.6vh;
+    justify-content: space-around;
+    width: 60vw;
+    left: 30vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  header .nav-bgc nav .menu {
+    width: 40vw;
+    left: 38vw;
+  }
+}
+
+header .nav-bgc nav .menu.open {
   transform: translateX(0);
 }
 
-header nav li a {
+header .nav-bgc nav li a {
   color: #2c7ae7;
   text-decoration: none;
   font-weight: 500;
@@ -144,14 +214,14 @@ header nav li a {
 }
 
 @media (min-width: 375px) {
-  header nav li a {
+  header .nav-bgc nav li a {
     font-size: 25px;
     line-height: 60px;
   }
 }
 
 @media (min-width: 768px) {
-  header nav li a {
+  header .nav-bgc nav li a {
     font-size: 35px;
     line-height: 100px;
     position: relative;
@@ -159,7 +229,25 @@ header nav li a {
   }
 }
 
-header nav li .socials {
+@media (min-width: 1024px) {
+  header .nav-bgc nav li a {
+    font-size: 15px;
+    color: black;
+    transition: all 0.2s ease;
+  }
+  header .nav-bgc nav li a:hover {
+    color: #2c7ae7;
+  }
+}
+
+@media (min-width: 1600px) {
+  header .nav-bgc nav li a {
+    top: -8vh;
+    font-size: 17px;
+  }
+}
+
+header .nav-bgc nav .socials {
   display: flex;
   justify-content: space-between;
   width: 30vw;
@@ -167,33 +255,39 @@ header nav li .socials {
 }
 
 @media (min-width: 375px) {
-  header nav li .socials {
+  header .nav-bgc nav .socials {
     margin-top: 30px;
   }
 }
 
 @media (min-width: 768px) {
-  header nav li .socials {
+  header .nav-bgc nav .socials {
     position: relative;
     bottom: 150%;
   }
 }
 
-header nav li .socials i {
+@media (min-width: 1024px) {
+  header .nav-bgc nav .socials {
+    display: none;
+  }
+}
+
+header .nav-bgc nav .socials i {
   font-size: 17px;
 }
 
 @media (min-width: 375px) {
-  header nav li .socials i {
+  header .nav-bgc nav .socials i {
     font-size: 25px;
   }
 }
 
-header .banner-text {
+.banner-text {
   color: white;
 }
 
-header .banner-text h1 {
+.banner-text h1 {
   text-align: right;
   width: 79vw;
   position: relative;
@@ -202,20 +296,38 @@ header .banner-text h1 {
 }
 
 @media (min-width: 375px) {
-  header .banner-text h1 {
-    top: -100%;
+  .banner-text h1 {
+    top: -30%;
     width: 50vw;
-    left: -53%;
+    left: -30%;
   }
 }
 
 @media (min-width: 768px) {
-  header .banner-text h1 {
+  .banner-text h1 {
     font-size: 45px;
+    top: -95%;
   }
 }
 
-header .banner-text h2 {
+@media (min-width: 1024px) {
+  .banner-text h1 {
+    top: -30vh;
+    width: 35vw;
+    left: -26vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner-text h1 {
+    top: -22vh;
+    width: 20vw;
+    left: -20vh;
+    text-align: left;
+  }
+}
+
+.banner-text h2 {
   font-size: 20px;
   font-weight: 400;
   width: 90vw;
@@ -225,14 +337,33 @@ header .banner-text h2 {
 }
 
 @media (min-width: 375px) {
-  header .banner-text h2 {
+  .banner-text h2 {
     top: -90%;
     width: 60vw;
     left: -25%;
   }
 }
 
-header .buttons {
+@media (min-width: 1024px) {
+  .banner-text h2 {
+    top: -28vh;
+    width: 35vw;
+    left: -20vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .banner-text h2 {
+    top: -20vh;
+    width: 20vw;
+    left: -10vw;
+    text-align: left;
+    font-size: 22px;
+    font-weight: 200;
+  }
+}
+
+.buttons {
   display: flex;
   justify-content: space-around;
   width: 90vw;
@@ -240,15 +371,38 @@ header .buttons {
   top: 13%;
 }
 
+@media (min-width: 375px) {
+  .buttons {
+    top: 6%;
+  }
+}
+
 @media (min-width: 768px) {
-  header .buttons {
+  .buttons {
     top: -10%;
     width: 50vw;
     left: -180px;
   }
 }
 
-header .buttons a {
+@media (min-width: 1024px) {
+  .buttons {
+    top: -20vh;
+    width: 35vw;
+    left: -15vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .buttons {
+    top: -8vh;
+    width: 20vw;
+    left: -10vw;
+    text-align: left;
+  }
+}
+
+.buttons a {
   color: white;
   font-size: 15px;
   text-decoration: none;
@@ -258,25 +412,19 @@ header .buttons a {
 }
 
 @media (min-width: 375px) {
-  header .buttons a {
+  .buttons a {
     font-size: 17px;
     padding: 17px 20px;
     transform: translateY(-130%);
   }
 }
 
-@media (min-width: 375px) {
-  header .buttons a {
-    padding: 17px 25px;
-  }
-}
-
-header .buttons a i {
+.buttons a i {
   font-size: 13px;
   margin-left: 8px;
 }
 
-header .buttons .aboutus {
+.buttons .aboutus {
   background-color: #2c7ae7;
   border: 0;
 }
@@ -298,6 +446,19 @@ header::before {
   header::before {
     background-size: 200%;
     top: 6%;
+  }
+}
+
+@media (min-width: 1024px) {
+  header::before {
+    top: 3%;
+    background-size: 170%;
+  }
+}
+
+@media (min-width: 1600px) {
+  header::before {
+    background-size: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
