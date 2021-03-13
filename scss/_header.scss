@@ -4,105 +4,230 @@
     padding: 0;
 }
 
+body {
+    height: 200vh;
+}
+
 header {
     @include flexCenter(column);
     font-family: $mainFont;
     color: $mainColor;
     height: 100vh;
+    position: relative;
+
+
+    .logo {
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        width: 100vw;
+        height: 10%;
+        z-index: 2;
+
+        @media (min-width:$big-mobile) {
+            height: 8%;
+        }
+
+        @media (min-width:$tablet) {
+            height: 70px;
+        }
+
+        img {
+            width: 130px;
+            position: fixed;
+            top: 3%;
+            left: 35%;
+            z-index: 1330;
+
+            @media (min-width: $tablet) {
+                width: 150px;
+                top: 20px;
+                left: 40%;
+            }
+        }
+
+    }
+
+    .menu-btn {
+        position: fixed;
+        left: 30px;
+        top: 5%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 3;
+
+
+        @media (min-width: $big-mobile) {
+            top: 33px;
+        }
+
+        .menu-burger {
+            width: 20px;
+            height: 3px;
+            background-color: $mainColor;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-burger::before,
+        .menu-burger::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background: $mainColor;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+        }
+
+        .menu-burger::before {
+            transform: translateY(-10px);
+        }
+
+        .menu-burger::after {
+            transform: translateY(10px);
+        }
+
+    }
+
+    .menu-btn.open .menu-burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .menu-btn.open .menu-burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+
+    .menu-btn.open .menu-burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+
+    nav {
+        .menu {
+            @include flexCenter(column);
+            transform: translateX(-150%);
+            list-style-type: none;
+            transition: all .5s ease;
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+
+        .menu.open {
+            transform: translateX(0);
+        }
+
+        li {
+            a {
+                color: $mainColor;
+                text-decoration: none;
+                font-weight: 500;
+                line-height: 50px;
+                font-size: 20px;
+            }
+
+            .socials {
+                display: flex;
+                justify-content: space-between;
+                width: 30vw;
+                margin-top: 15px;
+
+                i {
+                    font-size: 17px;
+                }
+
+            }
+        }
+
+
+    }
+
+    .banner-text {
+        color: white;
+
+        h1 {
+            text-align: right;
+            width: 79vw;
+            position: relative;
+            left: -20%;
+            top: -4%;
+
+            @media (min-width: $big-mobile) {
+                top: -20%;
+            }
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 400;
+            width: 90vw;
+            position: relative;
+            top: 12%;
+            line-height: 30px;
+
+            @media (min-width: $big-mobile) {
+                top: -5%;
+            }
+        }
+
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 90vw;
+        position: relative;
+        top: 13%;
+
+        a {
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+            border: solid 1px white;
+            border-radius: 15px;
+            padding: 10px 15px;
+
+            @media (min-width:$big-mobile) {
+                font-size: 17px;
+                padding: 17px 20px;
+                transform: translateY(-130%);
+            }
+
+            i {
+                font-size: 13px;
+                margin-left: 8px;
+            }
+
+        }
+
+        .aboutus {
+            background-color: $mainColor;
+            border: 0;
+        }
+    }
 
 }
 
 
-header .logo img {
-    width: 130px;
+header::before {
+    content: "";
+    background: url("../images/main-banner-img1.jpg") no-repeat;
+    background-position: top;
+    background-size: 500%;
+    top: 0%;
     position: absolute;
-    top: 5%;
-    left: 120px;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+    opacity: 1;
 
-}
-
-.menu-btn {
-    position: fixed;
-    left: 30px;
-    top: 7%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    z-index: 2;
-}
-
-.menu-burger {
-    width: 20px;
-    height: 3px;
-    background-color: $mainColor;
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-
-.menu-burger::before,
-.menu-burger::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: $mainColor;
-    border-radius: 5px;
-    transition: all .5s ease-in-out;
-}
-
-.menu-burger::before {
-    transform: translateY(-10px);
-}
-
-.menu-burger::after {
-    transform: translateY(10px);
-}
-
-.menu-btn.open .menu-burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-
-.menu-btn.open .menu-burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-
-.menu-btn.open .menu-burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-}
-
-
-
-.menu {
-    @include flexCenter(column);
-    transform: translateX(-150%);
-    list-style-type: none;
-    transition: all .5s ease;
-
-}
-
-.menu.open {
-    transform: translateX(0);
-}
-
-nav ul li a {
-    color: $mainColor;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 50px;
-    font-size: 20px;
-}
-
-.socials {
-    display: flex;
-    justify-content: space-between;
-    width: 30vw;
-    margin-top: 15px;
-
-}
-
-.socials i {
-    font-size: 17px;
 }
