@@ -133,7 +133,21 @@ header {
                 font-weight: 500;
                 line-height: 50px;
                 font-size: 20px;
+
+                @media (min-width:$big-mobile) {
+                    font-size: 25px;
+                    line-height: 60px;
+                }
+
+                @media (min-width:$tablet) {
+                    font-size: 35px;
+                    line-height: 100px;
+                    position: relative;
+                    top: -120px;
+                }
             }
+
+
 
             .socials {
                 display: flex;
@@ -141,8 +155,21 @@ header {
                 width: 30vw;
                 margin-top: 15px;
 
+                @media (min-width:$big-mobile) {
+                    margin-top: 30px;
+                }
+
+                @media (min-width:$tablet) {
+                    position: relative;
+                    bottom: 150%;
+                }
+
                 i {
                     font-size: 17px;
+
+                    @media (min-width:$big-mobile) {
+                        font-size: 25px;
+                    }
                 }
 
             }
@@ -162,7 +189,13 @@ header {
             top: -4%;
 
             @media (min-width: $big-mobile) {
-                top: -20%;
+                top: -100%;
+                width: 50vw;
+                left: -53%;
+            }
+
+            @media (min-width:$tablet) {
+                font-size: 45px;
             }
         }
 
@@ -175,7 +208,9 @@ header {
             line-height: 30px;
 
             @media (min-width: $big-mobile) {
-                top: -5%;
+                top: -90%;
+                width: 60vw;
+                left: -25%;
             }
         }
 
@@ -187,6 +222,12 @@ header {
         width: 90vw;
         position: relative;
         top: 13%;
+
+        @media(min-width:$tablet) {
+            top: -10%;
+            width: 50vw;
+            left: -180px
+        }
 
         a {
             color: white;
@@ -201,6 +242,11 @@ header {
                 padding: 17px 20px;
                 transform: translateY(-130%);
             }
+
+            @media (min-width:$big-mobile) {
+                padding: 17px 25px;
+            }
+
 
             i {
                 font-size: 13px;
@@ -229,5 +275,10 @@ header::before {
     width: 100%;
     z-index: -10;
     opacity: 1;
+
+    @media (min-width:$tablet) {
+        background-size: 200%;
+        top: 6%;
+    }
 
 }
