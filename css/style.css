@@ -299,14 +299,15 @@ header .nav-bgc nav .socials i {
   .banner-text h1 {
     top: -30%;
     width: 50vw;
-    left: -30%;
+    left: 0;
   }
 }
 
 @media (min-width: 768px) {
   .banner-text h1 {
     font-size: 45px;
-    top: -95%;
+    top: -110%;
+    left: -15%;
   }
 }
 
@@ -338,9 +339,16 @@ header .nav-bgc nav .socials i {
 
 @media (min-width: 375px) {
   .banner-text h2 {
-    top: -90%;
-    width: 60vw;
-    left: -25%;
+    top: -20%;
+    width: 80vw;
+    left: 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-text h2 {
+    top: -22vh;
+    text-align: center;
   }
 }
 
@@ -381,7 +389,7 @@ header .nav-bgc nav .socials i {
   .buttons {
     top: -10%;
     width: 50vw;
-    left: -180px;
+    left: 0;
   }
 }
 
