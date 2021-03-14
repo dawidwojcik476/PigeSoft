@@ -1,0 +1,52 @@
+.whywe {
+    font-family: $mainFont;
+    background-color: rgb(238, 241, 253);
+    padding: 3vh 0 3vh 0;
+
+    .header {
+        @include header(35px);
+        margin: 2vh 0 2vh 0;
+
+
+    }
+
+    ul {
+        li {
+            border-top: solid 1px #81ace9;
+
+            div {
+                font-weight: 700;
+                @include backgroundColor();
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: white;
+                border-radius: 50%;
+                position: relative;
+                top: 28px;
+                margin-left: 10px;
+            }
+
+            h3 {
+                text-align: right;
+                width: 80vw;
+                position: relative;
+                left: 15vw;
+                font-weight: 600;
+            }
+
+            p {
+                margin: 20px 0 20px 0;
+                font-weight: 400;
+                line-height: 22px;
+                margin-left: 60px;
+            }
+        }
+
+        li:nth-of-type(1) {
+            border: 0;
+        }
+    }
+
+}

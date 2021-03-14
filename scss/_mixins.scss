@@ -4,3 +4,14 @@
     align-items: center;
     flex-direction: $direction;
 }
+
+@mixin header($font-size) {
+    text-align: center;
+    font-size: $font-size;
+    font-weight: 500;
+}
+
+@mixin backgroundColor() {
+    background: rgb(44, 122, 231);
+    background: linear-gradient(90deg, rgba(44, 122, 231, 1) 35%, rgba(87, 155, 251, 1) 100%);
+}

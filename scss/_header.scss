@@ -387,7 +387,7 @@ header {
     }
 
     .aboutus {
-        background-color: $mainColor;
+        @include backgroundColor();
         border: 0;
     }
 }
