@@ -67,15 +67,14 @@ header {
                     width: 150px;
                     top: 20px;
                     left: 41%;
+                }
 
-                    @media (min-width: $desktop) {
-                        transform: translateX(-24vh);
+                @media (min-width: $desktop) {
+                    transform: translateX(-24vh)
+                }
 
-                        @media (min-width: $big-desktop) {
-                            transform: translateX(-30vh);
-                        }
-                    }
-
+                @media (min-width: $big-desktop) {
+                    transform: translateX(-30vh);
                 }
             }
 
@@ -93,7 +92,7 @@ header {
 
 
             @media (min-width: $big-mobile) {
-                top: 33px;
+                top: 30px;
             }
 
             @media (min-width: $desktop) {

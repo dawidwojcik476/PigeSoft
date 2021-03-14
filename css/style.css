@@ -88,13 +88,13 @@ header .nav-bgc .logo img {
   }
 }
 
-@media (min-width: 768px) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   header .nav-bgc .logo img {
     transform: translateX(-24vh);
   }
 }
 
-@media (min-width: 768px) and (min-width: 1024px) and (min-width: 1600px) {
+@media (min-width: 1600px) {
   header .nav-bgc .logo img {
     transform: translateX(-30vh);
   }
@@ -113,7 +113,7 @@ header .nav-bgc .menu-btn {
 
 @media (min-width: 375px) {
   header .nav-bgc .menu-btn {
-    top: 33px;
+    top: 30px;
   }
 }
 
@@ -473,8 +473,14 @@ header::before {
 
 .services {
   width: 100vw;
-  margin-top: 3vh;
+  margin-top: 1vh;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .services {
+    margin-top: -36vh;
+  }
 }
 
 .services .header {
@@ -485,6 +491,15 @@ header::before {
 
 .services ul {
   margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .services ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .services ul li {
@@ -498,6 +513,15 @@ header::before {
   padding: 20px;
   margin-top: 30px;
   height: 200px;
+}
+
+@media (min-width: 768px) {
+  .services ul li {
+    width: 40%;
+    margin-left: 60px;
+    position: relative;
+    left: -30px;
+  }
 }
 
 .services ul li i {
@@ -526,6 +550,12 @@ header::before {
   padding: 3vh 0 3vh 0;
 }
 
+@media (min-width: 768px) {
+  .whywe {
+    margin-top: 5vh;
+  }
+}
+
 .whywe .header {
   text-align: center;
   font-size: 35px;
@@ -533,8 +563,24 @@ header::before {
   margin: 2vh 0 2vh 0;
 }
 
+@media (min-width: 768px) {
+  .whywe ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .whywe ul li {
   border-top: solid 1px #81ace9;
+}
+
+@media (min-width: 768px) {
+  .whywe ul li {
+    width: 50%;
+  }
+  .whywe ul li:nth-of-type(2) {
+    border: 0;
+  }
 }
 
 .whywe ul li div {
@@ -552,12 +598,25 @@ header::before {
   margin-left: 10px;
 }
 
+@media (min-width: 768px) {
+  .whywe ul li div {
+    margin-left: 60px;
+  }
+}
+
 .whywe ul li h3 {
   text-align: right;
-  width: 80vw;
+  width: 60vw;
   position: relative;
   left: 15vw;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .whywe ul li h3 {
+    left: 16vw;
+    width: 30vw;
+  }
 }
 
 .whywe ul li p {
@@ -572,222 +631,162 @@ header::before {
 }
 
 .contactus {
-  background-color: #eef1fd;
   font-family: "Montserrat", sans-serif;
-}
-
-.contactus .contactin {
-  width: 80%;
-  height: auto;
-  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 0px #666;
+  justify-content: center;
 }
 
-.contactus .contactin .contactmap {
+.contactus .wrapper {
   width: 100%;
-  height: auto;
-  flex: 50%;
+  max-width: 550px;
+  padding: 30px;
+  border-radius: 5px;
 }
 
-.contactus .contactin .contactform {
-  width: 100%;
-  height: auto;
-  flex: 50%;
-}
-
-.contactus .contactin .contactform .text {
-  width: 100%;
-  height: 40px;
-  color: #000;
-  border: 1px solid black;
-  outline: none;
-  margin-bottom: 20px;
-  padding: 15px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.contactus .contactin .contactform .textarea {
-  width: 100%;
-  height: 140px;
-  color: #000;
-  border: 1px solid black;
-  border-radius: 20px;
-  outline: none;
-  margin-bottom: 20px;
-  padding: 15px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.contactus .contactin .contactform .contactbtn {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  border-radius: 20px;
-  background-color: #2c7ae7;
-}
-
-.services {
-  width: 100vw;
-  margin-top: 3vh;
-  font-family: "Montserrat", sans-serif;
-}
-
-.services .header {
+.contactus .wrapper .title h2 {
+  color: black;
   text-align: center;
+  margin-bottom: 25px;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
-.services ul {
-  margin: 20px;
+.contactus .wrapper .contact-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.services ul li {
+@media (min-width: 375px) {
+  .contactus .wrapper .contact-form {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .contactus .wrapper .contact-form {
+    flex-direction: row;
+  }
+}
+
+.contactus .wrapper .contact-form .input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+  width: 100%;
+}
+
+.contactus .wrapper .contact-form .input-fields input {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #2c7ae7;
+  padding: 10px;
+  color: black;
+  width: 100%;
+}
+
+.contactus .wrapper .contact-form .msg {
+  width: 100%;
+}
+
+.contactus .wrapper .contact-form .msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #2c7ae7;
+  padding: 10px;
+  color: black;
+  width: 100%;
+  height: 212px;
+}
+
+@media (max-width: 375px) {
+  .contactus .wrapper .contact-form .msg textarea {
+    height: 80px;
+  }
+}
+
+.contactus .wrapper .contact-form .msg .btn {
+  background: #2c7ae7;
+  background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  background-color: #303036;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .location {
+  padding-top: 40px;
+}
+
+footer .location ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  border: 1px solid #a7a5a5;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 30px;
-  height: 200px;
-}
-
-.services ul li i {
-  font-size: 35px;
-  color: white;
-  background: #2c7ae7;
-  background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
-  line-height: 70px;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-.services ul li h3 {
-  margin-top: 15px;
-}
-
-.services ul li p {
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-.whywe {
-  font-family: "Montserrat", sans-serif;
-  background-color: #eef1fd;
-  padding: 3vh 0 3vh 0;
-}
-
-.whywe .header {
-  text-align: center;
-  font-size: 35px;
-  font-weight: 500;
-  margin: 2vh 0 2vh 0;
-}
-
-.whywe ul li {
-  border-top: solid 1px #81ace9;
-}
-
-.whywe ul li div {
-  font-weight: 700;
-  background: #2c7ae7;
-  background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  color: white;
-  border-radius: 50%;
+  flex-direction: row;
+  line-height: 50px;
+  justify-content: left;
   position: relative;
-  top: 28px;
-  margin-left: 10px;
+  left: 10vw;
+  width: 90vw;
 }
 
-.whywe ul li h3 {
-  text-align: right;
-  width: 80vw;
-  position: relative;
-  left: 15vw;
-  font-weight: 600;
+footer .location ul li i {
+  font-size: 20px;
 }
 
-.whywe ul li p {
-  margin: 20px 0 20px 0;
-  font-weight: 400;
-  line-height: 22px;
-  margin-left: 60px;
+footer .location ul li p {
+  margin-left: 20px;
 }
 
-.whywe ul li:nth-of-type(1) {
-  border: 0;
-}
-
-.contactus {
-  background-color: #eef1fd;
-  font-family: "Montserrat", sans-serif;
-}
-
-.contactus .contactin {
-  width: 80%;
-  height: auto;
-  margin: auto;
+footer .socials {
   display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 0px #666;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60vw;
+  position: relative;
+  left: 20%;
 }
 
-.contactus .contactin .contactmap {
-  width: 100%;
-  height: auto;
-  flex: 50%;
+footer .socials i {
+  margin-top: 30px;
+  font-size: 24px;
 }
 
-.contactus .contactin .contactform {
-  width: 100%;
-  height: auto;
-  flex: 50%;
+footer .info {
+  margin-top: 40px;
 }
 
-.contactus .contactin .contactform .text {
-  width: 100%;
-  height: 40px;
-  color: #000;
-  border: 1px solid black;
-  outline: none;
-  margin-bottom: 20px;
-  padding: 15px;
-  font-family: "Montserrat", sans-serif;
+footer .info img {
+  width: 150px;
+  margin-left: 20px;
 }
 
-.contactus .contactin .contactform .textarea {
-  width: 100%;
-  height: 140px;
-  color: #000;
-  border: 1px solid black;
-  border-radius: 20px;
-  outline: none;
-  margin-bottom: 20px;
-  padding: 15px;
-  font-family: "Montserrat", sans-serif;
+footer .info p {
+  margin: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  font-size: 15px;
 }
 
-.contactus .contactin .contactform .contactbtn {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  border-radius: 20px;
-  background-color: #2c7ae7;
+footer .rights {
+  text-align: center;
+  padding-bottom: 20px;
+  border-top: 1px solid #555555;
+}
+
+footer .rights p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #adadad;
 }
 /*# sourceMappingURL=style.css.map */
