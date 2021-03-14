@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="nav-bgc">
             <div class="menu-btn">
                 <div class="menu-burger"></div>
@@ -21,10 +21,10 @@
             <div class="logo"><img src="images/logo.png" alt=""></div>
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Home</a> </li>
-                    <li><a href="#">Our Services</a> </li>
-                    <li><a href="#">Why Choose Us</a> </li>
-                    <li><a href="#">Contact Us</a> </li>
+                    <li><a href="#home">Home</a> </li>
+                    <li><a href="#services">Our Services</a> </li>
+                    <li><a href="#why">Why Choose Us</a> </li>
+                    <li><a href="#contact">Contact Us</a> </li>
                     <li>
                         <div class="socials">
                             <i class="fab fa-facebook-f"></i>
@@ -41,12 +41,12 @@
         </div>
 
         <div class="buttons">
-            <a href="#" class="aboutus">About Us <i class="fas fa-chevron-right"></i></a>
-            <a href="#">Contact Us <i class="fas fa-chevron-right"></i></a>
+            <a href="#why" class="aboutus">About Us <i class="fas fa-chevron-right"></i></a>
+            <a href="#contact">Contact Us <i class="fas fa-chevron-right"></i></a>
         </div>
     </header>
 
-    <section class="services">
+    <section id="services" class="services">
         <div class="header">Our Services</div>
         <ul>
             <li>
@@ -64,10 +64,25 @@
                 <h3>Cloud Development</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, mollitia? </p>
             </li>
+            <li class="desktopdisplay">
+                <i class="fab fa-android"></i>
+                <h3>Android Apps</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, mollitia? </p>
+            </li>
+            <li class="desktopdisplay">
+                <i class="fas fa-pencil-alt"></i>
+                <h3>UX and Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, mollitia? </p>
+            </li>
+            <li class="desktopdisplay">
+                <i class="fab fa-apple"></i>
+                <h3>IOS/MacOS Apps</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, mollitia? </p>
+            </li>
         </ul>
     </section>
 
-    <section class="whywe">
+    <section id="why" class="whywe">
         <div class="header">
             Why Choose Us
         </div>
@@ -99,7 +114,7 @@
             </li>
         </ul>
     </section>
-    <section class="contactus">
+    <section id="contact" class="contactus">
         <div class="wrapper">
             <div class="title">
                 <h2>Contact Us</h2>
@@ -120,36 +135,41 @@
     </section>
 
     <footer>
-        <div class="location">
-            <ul>
-                <li class="adress">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p> 849 Livino Bristow, VA 20136</p>
-                </li>
-                <li class="phone">
-                    <i class="fas fa-phone-alt"></i>
-                    <p> +1-202-555-0143</p>
-                </li>
-                <li class="mail">
-                    <i class="fas fa-envelope"></i>
-                    <p>pigesoft@gmail.com</p>
-                </li>
-            </ul>
-        </div>
-        <div class="socials">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i></div>
-        <div class="info">
-            <img src="images/logo.png" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex harum sapiente non exercitationem nisi
-                accusamus expedita numquam tempore reiciendis vel?</p>
+        <div class="topfooter">
+            <div class="location">
+                <ul>
+                    <li class="adress">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p> 849 Livino Bristow, VA 20136</p>
+                    </li>
+                    <li class="phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <p> +1-202-555-0143</p>
+                    </li>
+                    <li class="mail">
+                        <i class="fas fa-envelope"></i>
+                        <p>pigesoft@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="info">
+                <img src="images/logo.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex harum sapiente non exercitationem nisi
+                    accusamus expedita numquam tempore reiciendis vel?</p>
+            </div>
+            <div class="socials">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i></div>
+
         </div>
         <div class="rights">
             <p> Development by Dawid Wojcik</p>
             <p>© 2021 PigeSoft. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js">
+    </script>
     <script src="main.js"></script>
 </body>
 

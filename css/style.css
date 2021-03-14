@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 200vh;
+  overflow-x: hidden;
 }
 
 header {
@@ -58,6 +58,7 @@ header .nav-bgc .logo {
   width: 30vw;
   height: 10%;
   z-index: 2;
+  cursor: pointer;
 }
 
 @media (min-width: 375px) {
@@ -417,6 +418,13 @@ header .nav-bgc nav .socials i {
   border: solid 1px white;
   border-radius: 15px;
   padding: 10px 15px;
+  transition: all 0.5s ease;
+}
+
+.buttons a:hover {
+  background: #2c7ae7;
+  background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
+  border: 1px solid transparent;
 }
 
 @media (min-width: 375px) {
@@ -435,6 +443,11 @@ header .nav-bgc nav .socials i {
 .buttons .aboutus {
   background: #2c7ae7;
   background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
+  border: 0;
+}
+
+.buttons .aboutus:hover {
+  background: linear-gradient(90deg, #4f97fc 0%, #2c7ae7 61%);
   border: 0;
 }
 
@@ -483,6 +496,12 @@ header::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .services {
+    margin-top: -20vh;
+  }
+}
+
 .services .header {
   text-align: center;
   font-size: 40px;
@@ -502,6 +521,14 @@ header::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .services ul {
+    width: 70vw;
+    position: relative;
+    left: 14%;
+  }
+}
+
 .services ul li {
   display: flex;
   justify-content: center;
@@ -513,6 +540,7 @@ header::before {
   padding: 20px;
   margin-top: 30px;
   height: 200px;
+  transition: 0 all ease;
 }
 
 @media (min-width: 768px) {
@@ -521,6 +549,24 @@ header::before {
     margin-left: 60px;
     position: relative;
     left: -30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services ul li {
+    width: 22%;
+    height: 250px;
+    margin-top: 55px;
+  }
+  .services ul li:hover {
+    background: #2c7ae7;
+    background: linear-gradient(90deg, #2c7ae7 35%, #579bfb 100%);
+    color: white;
+    cursor: pointer;
+  }
+  .services ul li:hover i {
+    color: #2c7ae7;
+    background: #fff;
   }
 }
 
@@ -539,9 +585,31 @@ header::before {
   margin-top: 15px;
 }
 
+@media (min-width: 1024px) {
+  .services ul li h3 {
+    font-size: 22px;
+  }
+}
+
 .services ul li p {
   font-size: 14px;
   margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  .services ul li p {
+    font-size: 18px;
+  }
+}
+
+.services ul .desktopdisplay {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .services ul .desktopdisplay {
+    display: flex;
+  }
 }
 
 .whywe {
@@ -567,11 +635,21 @@ header::before {
   .whywe ul {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .whywe ul {
+    width: 50vw;
+    left: 25%;
   }
 }
 
 .whywe ul li {
   border-top: solid 1px #81ace9;
+  list-style-type: none;
 }
 
 @media (min-width: 768px) {
@@ -579,6 +657,14 @@ header::before {
     width: 50%;
   }
   .whywe ul li:nth-of-type(2) {
+    border: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .whywe ul li {
+    width: 50%;
+    margin-top: 30px;
     border: 0;
   }
 }
@@ -619,11 +705,26 @@ header::before {
   }
 }
 
+@media (min-width: 1024px) {
+  .whywe ul li h3 {
+    left: 7vw;
+    width: 15vw;
+    font-size: 20px;
+  }
+}
+
 .whywe ul li p {
   margin: 20px 0 20px 0;
   font-weight: 400;
   line-height: 22px;
   margin-left: 60px;
+}
+
+@media (min-width: 1024px) {
+  .whywe ul li p {
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 
 .whywe ul li:nth-of-type(1) {
@@ -722,11 +823,31 @@ footer {
   color: rgba(255, 255, 255, 0.8);
 }
 
-footer .location {
+@media (min-width: 768px) {
+  footer .topfooter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+footer .topfooter .location {
   padding-top: 40px;
 }
 
-footer .location ul li {
+@media (min-width: 768px) {
+  footer .topfooter .location {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .topfooter .location {
+    position: relative;
+    left: 20%;
+  }
+}
+
+footer .topfooter .location ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -738,15 +859,23 @@ footer .location ul li {
   width: 90vw;
 }
 
-footer .location ul li i {
+footer .topfooter .location ul li:hover {
+  cursor: pointer;
+}
+
+footer .topfooter .location ul li:hover i {
+  color: #2c7ae7;
+}
+
+footer .topfooter .location ul li i {
   font-size: 20px;
 }
 
-footer .location ul li p {
+footer .topfooter .location ul li p {
   margin-left: 20px;
 }
 
-footer .socials {
+footer .topfooter .socials {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -757,21 +886,55 @@ footer .socials {
   left: 20%;
 }
 
-footer .socials i {
-  margin-top: 30px;
+@media (min-width: 768px) {
+  footer .topfooter .socials {
+    width: 20%;
+    left: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .topfooter .socials {
+    left: -70vh;
+    width: 10%;
+    top: 11vh;
+  }
+}
+
+footer .topfooter .socials i {
+  margin-top: 20px;
   font-size: 24px;
 }
 
-footer .info {
+footer .topfooter .socials i:hover {
+  color: #2c7ae7;
+  cursor: pointer;
+}
+
+footer .topfooter .info {
   margin-top: 40px;
 }
 
-footer .info img {
+@media (min-width: 768px) {
+  footer .topfooter .info {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .topfooter .info {
+    width: 30%;
+    position: relative;
+    left: 5%;
+  }
+}
+
+footer .topfooter .info img {
   width: 150px;
   margin-left: 20px;
 }
 
-footer .info p {
+footer .topfooter .info p {
   margin: 15px;
   line-height: 23px;
   font-weight: 300;
@@ -782,6 +945,13 @@ footer .rights {
   text-align: center;
   padding-bottom: 20px;
   border-top: 1px solid #555555;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  footer .rights {
+    margin-top: 60px;
+  }
 }
 
 footer .rights p {

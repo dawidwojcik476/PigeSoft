@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 200vh;
+    overflow-x: hidden
 }
 
 header {
@@ -47,6 +47,7 @@ header {
             width: 30vw;
             height: 10%;
             z-index: 2;
+            cursor: pointer;
 
             @media (min-width:$big-mobile) {
                 height: 8%;
@@ -370,6 +371,14 @@ header {
         border: solid 1px white;
         border-radius: 15px;
         padding: 10px 15px;
+        transition: all 0.5s ease;
+
+        &:hover {
+            @include backgroundColor();
+            border: 1px solid transparent;
+
+
+        }
 
         @media (min-width:$big-mobile) {
             font-size: 17px;
@@ -388,6 +397,11 @@ header {
     .aboutus {
         @include backgroundColor();
         border: 0;
+
+        &:hover {
+            background: linear-gradient(90deg, rgba(79, 151, 252, 1) 0%, rgba(44, 122, 231, 1) 61%);
+            border: 0;
+        }
     }
 }
 

@@ -7,6 +7,10 @@
         margin-top: -36vh;
     }
 
+    @media(min-width:$desktop) {
+        margin-top: -20vh;
+    }
+
     .header {
         @include header(40px);
 
@@ -22,6 +26,12 @@
             justify-content: center;
         }
 
+        @media (min-width: $desktop) {
+            width: 70vw;
+            position: relative;
+            left: 14%;
+        }
+
         li {
             @include flexCenter(column);
             text-align: center;
@@ -30,12 +40,34 @@
             padding: 20px;
             margin-top: 30px;
             height: 200px;
+            transition: 0 all ease;
+
 
             @media(min-width:$tablet) {
                 width: 40%;
                 margin-left: 60px;
                 position: relative;
                 left: -30px;
+
+
+            }
+
+            @media (min-width: $desktop) {
+                width: 22%;
+                height: 250px;
+                margin-top: 55px;
+
+
+                &:hover {
+                    @include backgroundColor();
+                    color: white;
+                    cursor: pointer;
+
+                    i {
+                        color: $mainColor;
+                        background: #fff;
+                    }
+                }
             }
 
             i {
@@ -46,15 +78,32 @@
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
+
             }
 
             h3 {
                 margin-top: 15px;
+
+                @media (min-width: $desktop) {
+                    font-size: 22px;
+                }
             }
 
             p {
                 font-size: 14px;
                 margin-top: 10px;
+
+                @media (min-width: $desktop) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .desktopdisplay {
+            display: none;
+
+            @media (min-width:$tablet) {
+                display: flex;
             }
         }
     }

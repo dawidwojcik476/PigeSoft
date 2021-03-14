@@ -3,62 +3,130 @@ footer {
     background-color: #303036;
     color: rgba(255, 255, 255, 0.8);
 
-    .location {
-        padding-top: 40px;
+    .topfooter {
+        @media (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-        ul {
-            li {
-                @include flexCenter(row);
-                line-height: 50px;
-                justify-content: left;
+
+
+        .location {
+            padding-top: 40px;
+
+            @media (min-width: $tablet) {
+                width: 50%;
+            }
+
+            @media (min-width: $desktop) {
                 position: relative;
-                left: 10vw;
-                width: 90vw;
+                left: 20%;
 
-                i {
-                    font-size: 20px;
-                }
 
-                p {
-                    margin-left: 20px;
+            }
+
+
+
+
+            ul {
+                li {
+                    @include flexCenter(row);
+                    line-height: 50px;
+                    justify-content: left;
+                    position: relative;
+                    left: 10vw;
+                    width: 90vw;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        i {
+                            color: $mainColor;
+                        }
+                    }
+
+                    i {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        margin-left: 20px;
+                    }
                 }
             }
         }
+
+        .socials {
+            @include flexCenter(row);
+            justify-content: space-between;
+            width: 60vw;
+            position: relative;
+            left: 20%;
+
+            @media (min-width: $tablet) {
+                width: 20%;
+                left: 40%;
+            }
+
+            @media (min-width: $desktop) {
+                left: -70vh;
+                width: 10%;
+                top: 11vh;
+
+
+            }
+
+            i {
+                margin-top: 20px;
+                font-size: 24px;
+
+                &:hover {
+                    color: $mainColor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .info {
+            margin-top: 40px;
+
+            @media (min-width: $tablet) {
+                width: 50%;
+            }
+
+            @media (min-width: $desktop) {
+                width: 30%;
+                position: relative;
+                left: 5%;
+            }
+
+
+            img {
+                width: 150px;
+                margin-left: 20px;
+            }
+
+            p {
+                margin: 15px;
+                line-height: 23px;
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+
+
     }
 
-    .socials {
-        @include flexCenter(row);
-        justify-content: space-between;
-        width: 60vw;
-        position: relative;
-        left: 20%;
-
-        i {
-            margin-top: 30px;
-            font-size: 24px;
-        }
-    }
-
-    .info {
-        margin-top: 40px;
-
-        img {
-            width: 150px;
-            margin-left: 20px;
-        }
-
-        p {
-            margin: 15px;
-            line-height: 23px;
-            font-weight: 300;
-            font-size: 15px;
-        }
-    }
 
     .rights {
         text-align: center;
         padding-bottom: 20px;
         border-top: 1px solid rgb(85, 85, 85);
+        margin-top: 30px;
+
+        @media (min-width: $tablet) {
+            margin-top: 60px;
+        }
 
         p {
             margin-top: 10px;
@@ -66,4 +134,5 @@ footer {
             color: rgb(173, 173, 173);
         }
     }
+
 }

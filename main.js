@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector('.menu-btn');
 const mainMenu = document.querySelector('.menu');
+const menuHideBtn = document.querySelectorAll('.menu li')
 
 let menuOpen = false;
 
@@ -15,4 +16,15 @@ const menu = () => {
     }
 }
 
+
+const scroll = new SmoothScroll('a[href*="#"]');
+
+
 menuBtn.addEventListener('click', menu);
+menuHideBtn.forEach(function (button) {
+
+    button.addEventListener('click', function () {
+        menuBtn.classList.remove('open');
+        mainMenu.classList.remove('open');
+    })
+})
